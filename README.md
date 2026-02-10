@@ -8,6 +8,10 @@ A lightweight, self-hosted markdown viewer built for one problem: OpenClaw agent
 
 ![Node.js](https://img.shields.io/badge/Node.js-18+-green) ![License](https://img.shields.io/badge/license-MIT-blue)
 
+<p align="center">
+  <img src="assets/screenshot-mobile.jpg" alt="Workspace Viewer on mobile" width="320">
+</p>
+
 ## Why?
 
 If you run [OpenClaw](https://github.com/openclaw/openclaw) (or any AI agent framework), you end up with a workspace full of `.md` files:
