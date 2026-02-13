@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>.openclaw</title>
+  <title>Files - /</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.2.4/purify.min.js"></script>
   <style>
@@ -444,6 +444,7 @@
     function renderFileList(pathParts) {
       currentDirPath = pathParts;
       currentFilePath = null;
+      document.title = 'Files - /' + pathParts.join('/');
       const items = pathParts.length === 0 ? treeData : getItemsAtPath(pathParts);
       if (!items) { navigateHome(); return; }
 
@@ -484,6 +485,7 @@
     // === TREE VIEW ===
     function renderTreeView() {
       currentFilePath = null;
+      document.title = 'Files - /';
       renderBreadcrumb([], false);
       main.textContent = '';
       const container = document.createElement('div');
@@ -549,6 +551,7 @@
     // === FILE VIEW ===
     async function loadFile(filePath) {
       currentFilePath = filePath;
+      document.title = 'Files - /' + filePath;
       const parts = filePath.split('/');
       renderBreadcrumb(parts, true);
 
